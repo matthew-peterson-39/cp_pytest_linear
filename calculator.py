@@ -1,19 +1,19 @@
 import sys
 
 def calculate(num1, num2, operation):
+    
     if operation == "add":
         return num1 + num2
     elif operation == "subtract":
         return num1 - num2
     elif operation == "multiply":
-        return f'Result: {num1 * num2}\n'
+        return num1 * num2
     elif operation == "divide":
         if num2 != 0:
             return num1 / num2
         else:
             raise ValueError("Cannot divide by zero")
-
-if __name__ == "__main__":
+        
     if len(sys.argv) != 4:
         print("Usage: calculator.py <num1> <num2> <operation>")
         sys.exit(1)
